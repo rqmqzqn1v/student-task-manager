@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div id="auth" class="card">
+      <h2>Вход</h2>
+      <input id="username" placeholder="Имя студента">
+      <button onclick="login()">Войти</button>
+    </div>
+
+    <div id="app" class="hidden">
+      <header>
+        <h1 id="welcome"></h1>
+        <button class="logout" onclick="logout()">Выйти</button>
+      </header>
+
+      <div class="card">
+        <h3>Новая задача</h3>
+        <input id="title" placeholder="Название задачи">
+        <textarea id="desc" placeholder="Описание"></textarea>
+        <select id="priority">
+          <option>Низкий</option>
+          <option>Средний</option>
+          <option>Высокий</option>
+        </select>
+        <button onclick="addTask()">Добавить</button>
+      </div>
+
+      <div class="card">
+        <h3>Список задач</h3>
+        <ul id="tasks"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
